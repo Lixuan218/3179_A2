@@ -1,0 +1,150 @@
+department,category,category_rank,count,department_total,department_share_percent
+Asian Art,Print,1,479,1227,39.04
+Asian Art,Painting,2,98,1227,7.99
+Asian Art,Photograph,3,104,1227,8.48
+Asian Art,Drawing,4,22,1227,1.79
+Asian Art,Ceramic,5,197,1227,16.06
+Asian Art,Sculpture,6,130,1227,10.59
+Asian Art,Textile,8,82,1227,6.68
+Asian Art,Electronic media,9,1,1227,0.08
+Asian Art,Glass,10,2,1227,0.16
+Asian Art,Jewellery,11,5,1227,0.41
+Asian Art,Metalwork,13,25,1227,2.04
+Asian Art,Artefact,14,31,1227,2.53
+Asian Art,Book,16,5,1227,0.41
+Asian Art,Woodwork,17,21,1227,1.71
+Asian Art,Furniture,18,10,1227,0.81
+Asian Art,Miscellaneous,20,1,1227,0.08
+Asian Art,Stonework,22,14,1227,1.14
+Australian Art,Print,1,1136,5584,20.34
+Australian Art,Painting,2,1742,5584,31.2
+Australian Art,Photograph,3,655,5584,11.73
+Australian Art,Drawing,4,1166,5584,20.88
+Australian Art,Ceramic,5,381,5584,6.82
+Australian Art,Sculpture,6,169,5584,3.03
+Australian Art,Textile,8,66,5584,1.18
+Australian Art,Electronic media,9,35,5584,0.63
+Australian Art,Glass,10,1,5584,0.02
+Australian Art,Jewellery,11,57,5584,1.02
+Australian Art,Installation,12,5,5584,0.09
+Australian Art,Metalwork,13,43,5584,0.77
+Australian Art,Artefact,14,2,5584,0.04
+Australian Art,Multiple,15,1,5584,0.02
+Australian Art,Book,16,22,5584,0.39
+Australian Art,Woodwork,17,36,5584,0.64
+Australian Art,Furniture,18,46,5584,0.82
+Australian Art,Miscellaneous,20,6,5584,0.11
+Australian Art,Film,21,1,5584,0.02
+Australian Art,Leatherwork,23,14,5584,0.25
+Contemporary Asian Art,Print,1,143,1481,9.66
+Contemporary Asian Art,Painting,2,478,1481,32.28
+Contemporary Asian Art,Photograph,3,258,1481,17.42
+Contemporary Asian Art,Drawing,4,124,1481,8.37
+Contemporary Asian Art,Ceramic,5,41,1481,2.77
+Contemporary Asian Art,Sculpture,6,148,1481,9.99
+Contemporary Asian Art,Fibre,7,8,1481,0.54
+Contemporary Asian Art,Textile,8,66,1481,4.46
+Contemporary Asian Art,Electronic media,9,56,1481,3.78
+Contemporary Asian Art,Glass,10,1,1481,0.07
+Contemporary Asian Art,Installation,12,71,1481,4.79
+Contemporary Asian Art,Multiple,15,44,1481,2.97
+Contemporary Asian Art,Book,16,4,1481,0.27
+Contemporary Asian Art,Woodwork,17,1,1481,0.07
+Contemporary Asian Art,Furniture,18,3,1481,0.2
+Contemporary Asian Art,Assemblage,19,17,1481,1.15
+Contemporary Asian Art,Miscellaneous,20,5,1481,0.34
+Contemporary Asian Art,Film,21,13,1481,0.88
+Contemporary Australian Art,Print,1,1367,4633,29.51
+Contemporary Australian Art,Painting,2,684,4633,14.76
+Contemporary Australian Art,Photograph,3,975,4633,21.04
+Contemporary Australian Art,Drawing,4,306,4633,6.6
+Contemporary Australian Art,Ceramic,5,362,4633,7.81
+Contemporary Australian Art,Sculpture,6,197,4633,4.25
+Contemporary Australian Art,Fibre,7,14,4633,0.3
+Contemporary Australian Art,Textile,8,76,4633,1.64
+Contemporary Australian Art,Electronic media,9,137,4633,2.96
+Contemporary Australian Art,Glass,10,114,4633,2.46
+Contemporary Australian Art,Jewellery,11,108,4633,2.33
+Contemporary Australian Art,Installation,12,73,4633,1.58
+Contemporary Australian Art,Metalwork,13,43,4633,0.93
+Contemporary Australian Art,Multiple,15,34,4633,0.73
+Contemporary Australian Art,Book,16,45,4633,0.97
+Contemporary Australian Art,Woodwork,17,16,4633,0.35
+Contemporary Australian Art,Furniture,18,13,4633,0.28
+Contemporary Australian Art,Assemblage,19,30,4633,0.65
+Contemporary Australian Art,Miscellaneous,20,35,4633,0.76
+Contemporary Australian Art,Film,21,3,4633,0.06
+Contemporary Australian Art,Leatherwork,23,1,4633,0.02
+Contemporary International Art,Print,1,373,846,44.09
+Contemporary International Art,Painting,2,34,846,4.02
+Contemporary International Art,Photograph,3,100,846,11.82
+Contemporary International Art,Drawing,4,78,846,9.22
+Contemporary International Art,Ceramic,5,2,846,0.24
+Contemporary International Art,Sculpture,6,47,846,5.56
+Contemporary International Art,Textile,8,12,846,1.42
+Contemporary International Art,Electronic media,9,77,846,9.1
+Contemporary International Art,Glass,10,10,846,1.18
+Contemporary International Art,Installation,12,33,846,3.9
+Contemporary International Art,Metalwork,13,1,846,0.12
+Contemporary International Art,Multiple,15,32,846,3.78
+Contemporary International Art,Book,16,10,846,1.18
+Contemporary International Art,Assemblage,19,24,846,2.84
+Contemporary International Art,Miscellaneous,20,9,846,1.06
+Contemporary International Art,Film,21,4,846,0.47
+Indigenous Australian Art,Print,1,384,2827,13.58
+Indigenous Australian Art,Painting,2,1066,2827,37.71
+Indigenous Australian Art,Photograph,3,119,2827,4.21
+Indigenous Australian Art,Drawing,4,120,2827,4.24
+Indigenous Australian Art,Ceramic,5,148,2827,5.24
+Indigenous Australian Art,Sculpture,6,347,2827,12.27
+Indigenous Australian Art,Fibre,7,310,2827,10.97
+Indigenous Australian Art,Textile,8,40,2827,1.41
+Indigenous Australian Art,Electronic media,9,29,2827,1.03
+Indigenous Australian Art,Glass,10,13,2827,0.46
+Indigenous Australian Art,Jewellery,11,50,2827,1.77
+Indigenous Australian Art,Installation,12,22,2827,0.78
+Indigenous Australian Art,Metalwork,13,1,2827,0.04
+Indigenous Australian Art,Artefact,14,151,2827,5.34
+Indigenous Australian Art,Book,16,2,2827,0.07
+Indigenous Australian Art,Woodwork,17,17,2827,0.6
+Indigenous Australian Art,Assemblage,19,3,2827,0.11
+Indigenous Australian Art,Miscellaneous,20,5,2827,0.18
+International Art,Print,1,1041,2496,41.71
+International Art,Painting,2,323,2496,12.94
+International Art,Photograph,3,165,2496,6.61
+International Art,Drawing,4,117,2496,4.69
+International Art,Ceramic,5,286,2496,11.46
+International Art,Sculpture,6,89,2496,3.57
+International Art,Textile,8,86,2496,3.45
+International Art,Electronic media,9,19,2496,0.76
+International Art,Glass,10,153,2496,6.13
+International Art,Jewellery,11,17,2496,0.68
+International Art,Installation,12,1,2496,0.04
+International Art,Metalwork,13,110,2496,4.41
+International Art,Artefact,14,12,2496,0.48
+International Art,Multiple,15,1,2496,0.04
+International Art,Book,16,23,2496,0.92
+International Art,Woodwork,17,15,2496,0.6
+International Art,Furniture,18,26,2496,1.04
+International Art,Assemblage,19,7,2496,0.28
+International Art,Miscellaneous,20,1,2496,0.04
+International Art,Stonework,22,4,2496,0.16
+Pacific Art,Print,1,160,1580,10.13
+Pacific Art,Painting,2,161,1580,10.19
+Pacific Art,Photograph,3,293,1580,18.54
+Pacific Art,Drawing,4,116,1580,7.34
+Pacific Art,Ceramic,5,72,1580,4.56
+Pacific Art,Sculpture,6,152,1580,9.62
+Pacific Art,Fibre,7,394,1580,24.94
+Pacific Art,Textile,8,53,1580,3.35
+Pacific Art,Electronic media,9,50,1580,3.16
+Pacific Art,Glass,10,7,1580,0.44
+Pacific Art,Jewellery,11,29,1580,1.84
+Pacific Art,Installation,12,36,1580,2.28
+Pacific Art,Artefact,14,7,1580,0.44
+Pacific Art,Multiple,15,18,1580,1.14
+Pacific Art,Book,16,2,1580,0.13
+Pacific Art,Woodwork,17,4,1580,0.25
+Pacific Art,Assemblage,19,5,1580,0.32
+Pacific Art,Miscellaneous,20,19,1580,1.2
+Pacific Art,Film,21,2,1580,0.13

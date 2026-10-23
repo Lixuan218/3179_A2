@@ -1,0 +1,37 @@
+gallery,theme,present,status,source_url
+National Gallery of Victoria,Australian art,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Victoria,First Nations art,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Victoria,Asian art,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Victoria,Pacific art,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Victoria,Photography,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Victoria,Design,1,Explicitly identified,https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+National Gallery of Australia,Australian art,1,Explicitly identified,https://nga.gov.au/collections/
+National Gallery of Australia,First Nations art,1,Explicitly identified,https://nga.gov.au/collections/
+National Gallery of Australia,Asian art,1,Explicitly identified,https://nga.gov.au/collections/
+National Gallery of Australia,Pacific art,1,Explicitly identified,https://nga.gov.au/collections/
+National Gallery of Australia,Photography,1,Explicitly identified,https://nga.gov.au/collections/
+National Gallery of Australia,Design,1,Explicitly identified,https://nga.gov.au/collections/
+Art Gallery of New South Wales,Australian art,1,Explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Art Gallery of New South Wales,First Nations art,1,Explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Art Gallery of New South Wales,Asian art,1,Explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Art Gallery of New South Wales,Pacific art,0,Not explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Art Gallery of New South Wales,Photography,0,Not explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Art Gallery of New South Wales,Design,0,Not explicitly identified,https://media.artgallery.nsw.gov.au/downloads/files/Sydney_Modern_Masterplan_Framework_Section1-4.pdf
+Queensland Art Gallery,Australian art,1,Explicitly identified,https://collection.qagoma.qld.gov.au/
+Queensland Art Gallery,First Nations art,1,Explicitly identified,https://collection.qagoma.qld.gov.au/
+Queensland Art Gallery,Asian art,1,Explicitly identified,https://collection.qagoma.qld.gov.au/
+Queensland Art Gallery,Pacific art,1,Explicitly identified,https://collection.qagoma.qld.gov.au/
+Queensland Art Gallery,Photography,0,Not explicitly identified,https://collection.qagoma.qld.gov.au/
+Queensland Art Gallery,Design,0,Not explicitly identified,https://collection.qagoma.qld.gov.au/
+Art Gallery of South Australia,Australian art,1,Explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of South Australia,First Nations art,1,Explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of South Australia,Asian art,1,Explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of South Australia,Pacific art,0,Not explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of South Australia,Photography,1,Explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of South Australia,Design,1,Explicitly identified,https://www.agsa.sa.gov.au/collection-publications/about/
+Art Gallery of Western Australia,Australian art,1,Explicitly identified,https://artgallery.wa.gov.au/discover/collections/
+Art Gallery of Western Australia,First Nations art,1,Explicitly identified,https://artgallery.wa.gov.au/discover/collections/
+Art Gallery of Western Australia,Asian art,0,Not explicitly identified,https://artgallery.wa.gov.au/discover/collections/
+Art Gallery of Western Australia,Pacific art,0,Not explicitly identified,https://artgallery.wa.gov.au/discover/collections/
+Art Gallery of Western Australia,Photography,0,Not explicitly identified,https://artgallery.wa.gov.au/discover/collections/
+Art Gallery of Western Australia,Design,0,Not explicitly identified,https://artgallery.wa.gov.au/discover/collections/

@@ -1,0 +1,9 @@
+state,state_name,artist_count,longitude,latitude
+QLD,Queensland,885,145.0,-22.5
+NSW,New South Wales,557,147.0,-32.5
+VIC,Victoria,552,144.5,-37.0
+NT,Northern Territory,532,133.5,-19.5
+SA,South Australia,202,135.5,-30.0
+WA,Western Australia,185,121.5,-25.5
+ACT,Australian Capital Territory,32,149.0,-35.3
+TAS,Tasmania,15,146.5,-42.0
