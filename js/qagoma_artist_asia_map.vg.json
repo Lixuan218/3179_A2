@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 300,
+  "height": 190,
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.properties.name == 'United States of America' ? 'United States' : datum.properties.name == 'Czechia' ? 'Czech Republic' : datum.properties.name == \"Côte d'Ivoire\" ? 'Ivory Coast' : datum.properties.name",
+      "as": "country_clean"
+    },
+    {
+      "lookup": "country_clean",
+      "from": {
+        "data": {
+          "url": "Data/qagoma_artist_countries.csv"
+        },
+        "key": "country",
+        "fields": ["artist_count"]
+      }
+    }
+  ],
+
+  "projection": {
+    "type": "mercator",
+    "center": [120, 2],
+    "scale": 115
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "clip": true,
+        "fill": "#eee9df",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "isValid(datum.artist_count)"
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "clip": true,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      },
+
+      "encoding": {
+        "color": {
+          "field": "artist_count",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "domain": [1, 3000],
+            "range": [
+              "#efe9dc",
+              "#e2ca94",
+              "#d7b36a",
+              "#c28154",
+              "#a45d3f",
+              "#71392d",
+              "#3b231f"
+            ]
+          },
+          "legend": null
+        },
+
+        "tooltip": [
+          {
+            "field": "country_clean",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "artist_count",
+            "type": "quantitative",
+            "title": "Artist associations",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

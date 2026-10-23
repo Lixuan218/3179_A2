@@ -1,0 +1,113 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": "container",
+  "height": 380,
+  "background": "transparent",
+
+  "data": {
+    "values": [
+      {"state": "Queensland", "galleries": 104},
+      {"state": "New South Wales", "galleries": 96},
+      {"state": "Victoria", "galleries": 78},
+      {"state": "Western Australia", "galleries": 64},
+      {"state": "South Australia", "galleries": 55},
+      {"state": "Australian Capital Territory", "galleries": 18},
+      {"state": "Tasmania", "galleries": 11},
+      {"state": "Northern Territory", "galleries": 8}
+    ]
+  },
+
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "sort": {
+        "field": "galleries",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "labelFontSize": 13,
+        "labelColor": "#40352F",
+        "labelPadding": 12,
+        "labelLimit": 240,
+        "ticks": false,
+        "domain": false
+      }
+    },
+
+    "x": {
+      "field": "galleries",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0, 120],
+        "nice": false
+      },
+      "axis": {
+        "title": "Estimated number of public galleries",
+        "titleFontSize": 13,
+        "titlePadding": 18,
+        "labelFontSize": 12,
+        "grid": true,
+        "gridColor": "#E8E3DC",
+        "gridOpacity": 0.8,
+        "domain": false,
+        "tickCount": 7
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#B66A49",
+        "cornerRadiusEnd": 5,
+        "height": 26
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "galleries",
+            "type": "quantitative",
+            "title": "Estimated galleries",
+            "format": ",d"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#54362D"
+      },
+      "encoding": {
+        "text": {
+          "field": "galleries",
+          "type": "quantitative",
+          "format": "d"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 800,
+  "height": 330,
+
+  "data": {
+    "url": "Data/gallery_collection_themes.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "present": "number"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.present == 1 ? '●' : ''",
+      "as": "symbol"
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "theme",
+      "type": "nominal",
+      "title": "Collection theme",
+      "sort": [
+        "Australian art",
+        "First Nations art",
+        "Asian art",
+        "Pacific art",
+        "Photography",
+        "Design"
+      ],
+      "scale": {
+        "paddingInner": 0.08,
+        "paddingOuter": 0.04
+      },
+      "axis": {
+        "labelAngle": -25,
+        "labelFontSize": 12,
+        "labelColor": "#4f4a43",
+        "labelPadding": 12,
+        "labelLimit": 150,
+
+        "titleFontSize": 12,
+        "titleFontWeight": "bold",
+        "titleColor": "#4f4a43",
+        "titlePadding": 20,
+
+        "domain": false,
+        "ticks": false
+      }
+    },
+
+    "y": {
+      "field": "gallery",
+      "type": "nominal",
+      "title": "Gallery",
+      "sort": [
+        "NGV",
+        "NGA",
+        "QAGOMA",
+        "AGNSW",
+        "AGSA",
+        "AGWA"
+      ],
+      "scale": {
+        "paddingInner": 0.1,
+        "paddingOuter": 0.04
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "labelFontWeight": "bold",
+        "labelColor": "#3b231f",
+        "labelPadding": 16,
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 10,
+        "stroke": "#ffffff",
+        "strokeWidth": 4
+      },
+
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.present == 1",
+            "value": "#d7b36a"
+          },
+          "value": "#f1ece4"
+        },
+
+        "tooltip": [
+            {
+                "field": "gallery",
+                "type": "nominal",
+                "title": "Gallery"
+            },
+            {
+                "field": "theme",
+                "type": "nominal",
+                "title": "Collection theme"
+            }
+            ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "color": "#3b231f"
+      },
+
+      "encoding": {
+        "text": {
+          "field": "symbol"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Arial"
+  }
+}

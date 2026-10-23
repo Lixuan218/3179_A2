@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 850,
+  "height": 340,
+
+  "data": {
+    "url": "Data/qagoma_acquisition_timeline.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "acquisition_decade": "number",
+        "count": "number"
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "line": true,
+        "opacity": 0.2,
+        "color": "#a45d3f"
+      },
+      "encoding": {
+        "x": {
+          "field": "acquisition_decade",
+          "type": "quantitative",
+          "title": "Acquisition decade",
+          "scale": {
+            "domain": [1890, 2020]
+          },
+          "axis": {
+            "format": "d",
+            "labelExpr": "datum.value + 's'",
+            "labelFontSize": 11,
+            "labelColor": "#69645d",
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#4f4a43",
+            "grid": false,
+            "domain": false,
+            "ticks": false
+          }
+        },
+
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Artworks acquired",
+          "axis": {
+            "labelFontSize": 11,
+            "labelColor": "#69645d",
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#4f4a43",
+            "grid": true,
+            "gridColor": "#e6ded3",
+            "gridOpacity": 0.7,
+            "domain": false,
+            "ticks": false
+          }
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 75,
+        "color": "#a45d3f"
+      },
+      "encoding": {
+        "x": {
+          "field": "acquisition_decade",
+          "type": "quantitative"
+        },
+
+        "y": {
+          "field": "count",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "decade",
+            "type": "nominal",
+            "title": "Decade"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Artworks acquired",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}

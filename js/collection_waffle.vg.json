@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 420,
+  "height": 420,
+
+  "data": {
+    "sequence": {
+      "start": 1,
+      "stop": 101,
+      "as": "id"
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "(datum.id - 1) % 10",
+      "as": "column"
+    },
+    {
+      "calculate": "floor((datum.id - 1) / 10)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.id <= 72 ? 'Holds a permanent collection' : 'Does not hold a permanent collection'",
+      "as": "category"
+    },
+    {
+      "calculate": "datum.id <= 72 ? 72 : 28",
+      "as": "percentage"
+    }
+  ],
+
+  "mark": {
+    "type": "square",
+    "size": 1450,
+    "stroke": "#ffffff",
+    "strokeWidth": 2
+  },
+
+  "encoding": {
+    "x": {
+      "field": "column",
+      "type": "ordinal",
+      "axis": null
+    },
+
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "sort": "descending",
+      "axis": null
+    },
+
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Permanent collection",
+
+      "scale": {
+        "domain": [
+          "Holds a permanent collection",
+          "Does not hold a permanent collection"
+        ],
+
+        "range": [
+          "#bf8d78",
+          "#e4ca91"
+        ]
+      },
+
+      "legend": {
+        "orient": "bottom",
+        "direction": "vertical",
+        "titleFontSize": 14,
+        "labelFontSize": 12,
+        "labelLimit": 300,
+        "offset": 18
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "category",
+        "type": "nominal",
+        "title": "Gallery type"
+      },
+      {
+        "field": "percentage",
+        "type": "quantitative",
+        "title": "Percentage",
+        "format": ".0f"
+      }
+    ]
+  },
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    }
+  }
+}

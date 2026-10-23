@@ -1,0 +1,206 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 920,
+  "height": 430,
+
+  "data": {
+    "url": "Data/qagoma_department_category.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "category_rank": "number",
+        "count": "number",
+        "department_total": "number",
+        "department_share_percent": "number"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.count > 0"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 4,
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Artwork category",
+
+          "sort": {
+            "field": "category_rank",
+            "order": "ascending"
+          },
+
+          "axis": {
+            "labelAngle": -50,
+            "labelAlign": "right",
+            "labelBaseline": "top",
+
+            "labelFontSize": 10,
+            "labelColor": "#4f4a43",
+
+            "labelPadding": 8,
+            "labelLimit": 130,
+
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#4f4a43",
+            "titlePadding": 22,
+
+            "domain": false,
+            "ticks": false
+          }
+        },
+
+        "y": {
+          "field": "department",
+          "type": "nominal",
+          "title": "Collecting area",
+
+          "axis": {
+            "labelFontSize": 12,
+            "labelFontWeight": "bold",
+            "labelColor": "#3b231f",
+
+            "labelPadding": 12,
+            "labelLimit": 260,
+
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#3b231f",
+            "titlePadding": 18,
+
+            "domain": false,
+            "ticks": false
+          }
+        },
+
+        "color": {
+          "field": "department_share_percent",
+          "type": "quantitative",
+
+          "title": "Share within collecting area (%)",
+
+          "scale": {
+            "domain": [0, 40],
+            "range": [
+              "#f1ece4",
+              "#d7b36a",
+              "#a45d3f",
+              "#3b231f"
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "gradientLength": 280,
+            "gradientThickness": 12,
+
+            "titleFontSize": 11,
+            "titleColor": "#4f4a43",
+
+            "labelFontSize": 10,
+            "labelColor": "#69645d",
+
+            "format": ".0f"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "department",
+            "type": "nominal",
+            "title": "Collecting area"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Artwork category"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Number of artworks",
+            "format": ","
+          },
+          {
+            "field": "department_share_percent",
+            "type": "quantitative",
+            "title": "Share within area",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "bold"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "nominal",
+          "sort": {
+            "field": "category_rank",
+            "order": "ascending"
+          }
+        },
+
+        "y": {
+          "field": "department",
+          "type": "nominal"
+        },
+
+        "text": {
+          "field": "count",
+          "type": "quantitative",
+          "format": ","
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.department_share_percent >= 20",
+            "value": "#ffffff"
+          },
+          "value": "#3b231f"
+        },
+
+        "opacity": {
+          "condition": {
+            "test": "datum.count >= 50",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Arial"
+  }
+}

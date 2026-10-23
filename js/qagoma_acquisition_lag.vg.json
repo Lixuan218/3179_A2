@@ -1,0 +1,212 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 760,
+  "height": 300,
+
+  "data": {
+    "url": "Data/qagoma_acquisition_lag.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "count": "number",
+        "percentage": "number"
+      }
+    }
+  },
+
+  "layer": [
+
+    {
+      "mark": {
+        "type": "bar",
+        "size": 5,
+        "color": "#d7b36a",
+        "cornerRadiusEnd": 3
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "lag_group",
+          "type": "ordinal",
+          "title": null,
+
+          "sort": [
+            "0-5 years",
+            "6-20 years",
+            "21-50 years",
+            "51-100 years",
+            "100+ years"
+          ],
+
+          "axis": {
+            "labelFontSize": 13,
+            "labelColor": "#4f4a43",
+            "labelPadding": 12,
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "x": {
+          "field": "percentage",
+          "type": "quantitative",
+          "title": "Share of artworks (%)",
+
+          "scale": {
+            "domain": [0, 45]
+          },
+
+          "axis": {
+            "labelFontSize": 11,
+            "labelColor": "#69645d",
+
+            "titleFontSize": 12,
+            "titleFontWeight": "bold",
+            "titleColor": "#4f4a43",
+            "titlePadding": 15,
+
+            "grid": true,
+            "gridColor": "#e6ded3",
+            "gridOpacity": 0.65,
+
+            "domain": false,
+            "ticks": false
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "lag_group",
+            "type": "nominal",
+            "title": "Time to acquisition"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Artworks",
+            "format": ","
+          },
+          {
+            "field": "percentage",
+            "type": "quantitative",
+            "title": "Share",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 190,
+        "color": "#a45d3f",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "lag_group",
+          "type": "ordinal",
+
+          "sort": [
+            "0-5 years",
+            "6-20 years",
+            "21-50 years",
+            "51-100 years",
+            "100+ years"
+          ]
+        },
+
+        "x": {
+          "field": "percentage",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 45]
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "lag_group",
+            "type": "nominal",
+            "title": "Time to acquisition"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Artworks",
+            "format": ","
+          },
+          {
+            "field": "percentage",
+            "type": "quantitative",
+            "title": "Share",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 13,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#3b231f"
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "lag_group",
+          "type": "ordinal",
+
+          "sort": [
+            "0-5 years",
+            "6-20 years",
+            "21-50 years",
+            "51-100 years",
+            "100+ years"
+          ]
+        },
+
+        "x": {
+          "field": "percentage",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 45]
+          }
+        },
+
+        "text": {
+          "field": "percentage",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+
+  ],
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Arial"
+  }
+}

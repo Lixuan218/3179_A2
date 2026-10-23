@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 500,
+  "height": 520,
+
+  "projection": {
+    "type": "mercator",
+    "center": [134, -28],
+    "scale": 720
+  },
+
+  "layer": [
+
+    {
+      "data": {
+        "url": "Data/australia_states_fixed.json",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "datum.properties.STE_NAME21 != 'Other Territories' && datum.properties.STE_NAME21 != 'Outside Australia'"
+        },
+        {
+          "calculate": "datum.properties.STE_NAME21 == 'New South Wales' ? 'NSW' : datum.properties.STE_NAME21 == 'Victoria' ? 'VIC' : datum.properties.STE_NAME21 == 'Queensland' ? 'QLD' : datum.properties.STE_NAME21 == 'South Australia' ? 'SA' : datum.properties.STE_NAME21 == 'Western Australia' ? 'WA' : datum.properties.STE_NAME21 == 'Tasmania' ? 'TAS' : datum.properties.STE_NAME21 == 'Northern Territory' ? 'NT' : datum.properties.STE_NAME21 == 'Australian Capital Territory' ? 'ACT' : null",
+          "as": "State"
+        }
+      ],
+
+      "params": [
+        {
+          "name": "stateSelect",
+          "select": {
+            "type": "point",
+            "fields": ["State"],
+            "on": "click",
+            "clear": "dblclick"
+          }
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "color": {
+          "condition": {
+            "param": "stateSelect",
+            "empty": false,
+            "value": "#d7b36a"
+          },
+          "value": "#e8e1d5"
+        },
+
+        "tooltip": [
+          {
+            "field": "properties.STE_NAME21",
+            "type": "nominal",
+            "title": "State"
+          }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "Data/galleries_location_clean.csv"
+      },
+
+      "transform": [
+        {
+          "calculate": "datum.state",
+          "as": "State"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "color": "#a45d3f"
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+
+        "opacity": {
+          "condition": {
+            "param": "stateSelect",
+            "empty": true,
+            "value": 0.85
+          },
+          "value": 0.12
+        },
+
+        "size": {
+          "condition": {
+            "param": "stateSelect",
+            "empty": true,
+            "value": 55
+          },
+          "value": 25
+        },
+
+        "tooltip": [
+          {
+            "field": "gallery",
+            "type": "nominal",
+            "title": "Gallery"
+          },
+          {
+            "field": "city",
+            "type": "nominal",
+            "title": "City"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          }
+        ]
+      }
+    }
+
+  ],
+
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    }
+  }
+}

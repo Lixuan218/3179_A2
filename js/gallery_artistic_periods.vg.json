@@ -1,0 +1,158 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 850,
+  "height": 330,
+
+  "data": {
+    "url": "Data/gallery_artistic_periods.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "count": "number",
+        "percentage": "number"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.gallery === 'National Gallery of Victoria' ? 'NGV' : datum.gallery === 'National Gallery of Australia' ? 'NGA' : datum.gallery === 'Queensland Art Gallery | Gallery of Modern Art' ? 'QAGOMA' : datum.gallery === 'Art Gallery of New South Wales' ? 'AGNSW' : datum.gallery",
+      "as": "gallery_short"
+    }
+  ],
+
+  "mark": {
+    "type": "bar",
+    "cornerRadius": 3
+  },
+
+  "encoding": {
+
+    "y": {
+      "field": "gallery_short",
+      "type": "nominal",
+      "title": null,
+
+      "sort": [
+        "NGV",
+        "NGA",
+        "QAGOMA",
+        "AGNSW"
+      ],
+
+      "axis": {
+        "labelFontSize": 14,
+        "labelFontWeight": "bold",
+        "labelColor": "#3b231f",
+        "labelPadding": 14,
+        "ticks": false,
+        "domain": false
+      }
+    },
+
+
+    "x": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Share of dated acquisition records (%)",
+
+      "stack": "normalize",
+
+      "axis": {
+        "format": ".0%",
+        "labelFontSize": 11,
+        "labelColor": "#69645d",
+
+        "titleFontSize": 12,
+        "titleFontWeight": "bold",
+        "titleColor": "#4f4a43",
+
+        "grid": true,
+        "gridColor": "#e9e2d9",
+        "gridOpacity": 0.7,
+
+        "domain": false,
+        "ticks": false
+      }
+    },
+
+
+    "color": {
+      "field": "period",
+      "type": "nominal",
+      "title": null,
+
+      "sort": [
+        "Before 1900",
+        "1900-1949",
+        "1950-1979",
+        "1980-1999",
+        "2000-2021"
+      ],
+
+      "scale": {
+        "domain": [
+          "Before 1900",
+          "1900-1949",
+          "1950-1979",
+          "1980-1999",
+          "2000-2021"
+        ],
+
+        "range": [
+          "#3b231f",
+          "#735047",
+          "#a45d3f",
+          "#d7b36a",
+          "#eadfc8"
+        ]
+      },
+
+      "legend": null
+    },
+
+
+    "order": {
+      "field": "period",
+      "sort": "ascending"
+    },
+
+
+    "tooltip": [
+      {
+        "field": "gallery",
+        "type": "nominal",
+        "title": "Gallery"
+      },
+      {
+        "field": "period",
+        "type": "nominal",
+        "title": "Artistic period"
+      },
+      {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Dated records",
+        "format": ","
+      },
+      {
+        "field": "percentage",
+        "type": "quantitative",
+        "title": "Share",
+        "format": ".2f"
+      }
+    ]
+
+  },
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Arial"
+  }
+}

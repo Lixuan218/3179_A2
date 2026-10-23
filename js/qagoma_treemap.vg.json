@@ -1,0 +1,174 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+
+  "width": 1080,
+  "height": 620,
+  "padding": 6,
+  "autosize": "pad",
+
+  "data": [
+    {
+      "name": "artworks",
+      "url": "Data/qagoma_treemap.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "rank": "number",
+          "count": "number",
+          "share_percent": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "trim(datum.category)",
+          "as": "category_clean"
+        },
+        {
+          "type": "formula",
+          "expr": "pow(datum.count, 0.6)",
+          "as": "layout_value"
+        },
+        {
+          "type": "nest",
+          "keys": ["category_clean"]
+        },
+        {
+          "type": "treemap",
+          "field": "layout_value",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.2,
+          "size": [1080, 620]
+        },
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "colour",
+      "type": "linear",
+      "domain": [0, 5100],
+      "range": ["#eee5d9", "#3b231f"],
+      "nice": true,
+      "zero": true
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": { "data": "artworks" },
+      "encode": {
+        "enter": {
+          "x": { "field": "x0" },
+          "y": { "field": "y0" },
+          "x2": { "field": "x1" },
+          "y2": { "field": "y1" },
+          "stroke": { "value": "#ffffff" },
+          "strokeWidth": { "value": 3 },
+          "cornerRadius": { "value": 7 }
+        },
+        "update": {
+          "fill": {
+            "scale": "colour",
+            "field": "count"
+          },
+          "tooltip": {
+            "signal": "{'Artwork category': datum.category_clean, 'Number of artworks': format(datum.count, ','), 'Share of collection': format(datum.share_percent, '.2f') + '%'}"
+          }
+        },
+        "hover": {
+          "fillOpacity": { "value": 0.85 }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "from": { "data": "artworks" },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? (datum.x0 + datum.x1) / 2 : datum.x0 + 6"
+          },
+          "y": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? (datum.y0 + datum.y1) / 2 - 10 : datum.y0 + 10"
+          },
+          "align": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? 'center' : 'left'"
+          },
+          "baseline": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? 'middle' : 'top'"
+          },
+          "font": { "value": "Arial" },
+          "fontWeight": { "value": "bold" },
+          "fontSize": {
+            "signal": "datum.count > 4000 ? 18 : datum.count > 2000 ? 16 : datum.count > 1000 ? 13 : datum.count > 400 ? 11 : datum.count > 120 ? 9 : 8"
+          },
+          "fill": {
+            "signal": "datum.count > 3000 ? '#ffffff' : '#3b231f'"
+          },
+          "text": { "field": "category_clean" },
+          "limit": {
+            "signal": "max(0, datum.x1 - datum.x0 - 10)"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "(datum.x1 - datum.x0) > 26 && (datum.y1 - datum.y0) > 16 ? 1 : 0"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "from": { "data": "artworks" },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? (datum.x0 + datum.x1) / 2 : datum.x0 + 6"
+          },
+          "y": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? (datum.y0 + datum.y1) / 2 + 18 : datum.y0 + 26"
+          },
+          "align": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? 'center' : 'left'"
+          },
+          "baseline": {
+            "signal": "(datum.x1 - datum.x0) > 110 && (datum.y1 - datum.y0) > 75 ? 'middle' : 'top'"
+          },
+          "font": { "value": "Arial" },
+          "fontSize": {
+            "signal": "datum.count > 4000 ? 12 : datum.count > 2000 ? 11 : datum.count > 1000 ? 10 : datum.count > 400 ? 9 : 8"
+          },
+          "fill": {
+            "signal": "datum.count > 3000 ? '#f5eee5' : '#5f5149'"
+          },
+          "text": {
+            "signal": "format(datum.count, ',')"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "(datum.x1 - datum.x0) > 26 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+          }
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null
+  }
+}

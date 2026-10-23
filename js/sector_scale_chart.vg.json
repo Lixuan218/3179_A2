@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 300,
+  "height": 180,
+
+  "data": {
+    "url": "Data/sector_scale.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4,
+    "color": "#d7b36a"
+  },
+
+  "encoding": {
+    "y": {
+      "field": "metric",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 14,
+        "labelColor": "#222222",
+        "labelLimit": 220
+      }
+    },
+
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Number of galleries",
+      "axis": {
+        "grid": true,
+        "gridColor": "#e6e0d7",
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "metric",
+        "type": "nominal",
+        "title": "Metric"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Galleries"
+      }
+    ]
+  },
+
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false
+    }
+  }
+}
