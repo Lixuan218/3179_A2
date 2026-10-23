@@ -1,0 +1,3049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        From Gallery to Gallery: Australia's Visual Heritage
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Australian Public Art Collections
+        </div>
+
+        <h1>
+            From Gallery to Gallery:
+        </h1>
+
+        <h2>
+            Australia's Visual Heritage
+        </h2>
+
+        <p class="hero-description">
+            Comparing public gallery collections, artistic periods,
+            artwork categories and collecting priorities to explore
+            Australia's visual arts heritage.
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="container">
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="intro-section">
+
+    <div class="intro-kicker">
+        Introduction
+    </div>
+
+    <h2>
+        What do Australia's public art collections reveal about its visual heritage?
+    </h2>
+
+    <div class="intro-line"></div>
+
+
+    <div class="intro-grid">
+
+
+        <div class="intro-main">
+
+            <p>
+                Public galleries help preserve Australia's visual arts heritage
+                by collecting artworks from different periods, cultures,
+                artistic traditions and media. Yet no single gallery represents
+                this heritage in exactly the same way. Each institution develops
+                its collection through different priorities and areas of
+                specialisation.
+            </p>
+
+            <p>
+                This visualisation compares Australian public galleries through
+                their geographic distribution, collection themes and artistic
+                periods before examining QAGOMA as a detailed collection case
+                study. Together, the comparisons show how Australia's visual
+                heritage is formed through both shared collecting responsibilities
+                and distinctive institutional choices.
+            </p>
+
+        </div>
+
+
+        <div class="intro-question">
+
+            <div class="intro-question-label">
+                Guiding question
+            </div>
+
+            <p>
+                How do different Australian public galleries collect,
+                preserve and represent Australia's visual arts heritage?
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 01 — GEOGRAPHY
+========================================================= -->
+
+<section class="section"
+         id="section1">
+
+    <div class="section-number">
+        Section 01 · Geography
+    </div>
+
+    <h2>
+        Where are Australia's public art collections preserved?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Before comparing the collections themselves, it is useful to understand
+        the gallery network that preserves them. Public galleries operate across
+        every Australian state and territory, but their distribution is uneven,
+        creating different levels of institutional presence across the country.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 1
+    ====================================================== -->
+
+    <div class="visual-card">
+
+        <div class="visual-label">
+            Gallery distribution
+        </div>
+
+        <h3>
+            Which states have the largest public gallery networks?
+        </h3>
+
+        <p class="visual-description">
+            Based on the Australian Public Galleries Snapshot 2019,
+            this chart compares estimated numbers of small-to-medium
+            public galleries across Australia's states and territories.
+        </p>
+
+
+        <div id="gallery_comparison"
+             class="chart">
+        </div>
+
+        <div class="period-form-story">
+
+    <div class="period-story-label">
+        What this reveals
+    </div>
+
+    <h4>
+            Australia's public gallery network is concentrated unevenly across states and territories.
+        </h4>
+
+        <p>
+            Queensland records the largest estimated number of small-to-medium public
+            galleries at 104, followed by New South Wales with 96 and Victoria with 78.
+            Western Australia and South Australia also have substantial gallery networks,
+            while the Australian Capital Territory, Tasmania and the Northern Territory
+            record much smaller totals.
+        </p>
+
+        <p>
+            This uneven distribution matters for Australia's visual arts heritage because
+            public galleries are the institutions that collect, preserve and exhibit artworks.
+            States with larger gallery networks may have more institutions contributing to
+            the preservation and public presentation of visual heritage, while smaller states
+            and territories operate through more limited gallery networks.
+        </p>
+
+    </div>
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 2
+    ====================================================== -->
+
+    <div class="visual-card">
+
+        <div class="visual-label">
+            Gallery locations
+        </div>
+
+        <h3>
+            How are selected galleries distributed across Australia?
+        </h3>
+
+        <p class="visual-description">
+            This interactive map displays a separately compiled selection
+            of Australian galleries and art institutions. It does not represent
+            every public gallery in Australia, but it helps show how individual
+            institutions are distributed across states, cities and suburbs.
+        </p>
+
+
+
+        <div class="map-grid">
+
+
+            <!-- LEFT MAP -->
+
+            <div class="map-panel">
+
+                <h3>
+                    Australia's Gallery Network
+                </h3>
+
+                <p class="visual-description">
+                    Click a state to explore its recorded gallery locations.
+                </p>
+
+                <div id="gallery_location_map"
+                     class="chart">
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT EXPLORER -->
+
+            <div class="map-panel state-explorer">
+
+                <div class="explorer-label">
+                    STATE EXPLORER
+                </div>
+
+                <h3 id="explorer-state-name">
+                    Victoria
+                </h3>
+
+                <p class="visual-description">
+                    Explore how gallery records in this location dataset
+                    are distributed across cities and suburbs.
+                </p>
+
+
+
+                <div class="explorer-stats">
+
+
+                    <div class="explorer-stat">
+
+                        <div id="explorer-gallery-count"
+                             class="explorer-number">
+                            —
+                        </div>
+
+                        <div class="explorer-stat-label">
+                            Gallery records in location dataset
+                        </div>
+
+                    </div>
+
+
+                    <div class="explorer-stat">
+
+                        <div id="explorer-city-count"
+                             class="explorer-number">
+                            —
+                        </div>
+
+                        <div class="explorer-stat-label">
+                            Cities / suburbs represented
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <h4>
+                    Top 5 Gallery Locations
+                </h4>
+
+                <p class="visual-description">
+                    Cities and suburbs ranked by the number of gallery
+                    records in the selected location dataset.
+                </p>
+
+                <div id="state_city_chart"
+                     class="chart">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="data-clarification">
+
+            <strong>
+                Why are the gallery counts in chart 1 and 2 different?
+            </strong>
+
+            <p>
+                The state comparison uses historical estimates from the
+                Australian Public Galleries Snapshot, while the interactive
+                map uses a separately compiled set of individual gallery
+                locations. The two datasets therefore describe different
+                populations and should not be compared as equivalent totals.
+            </p>
+
+        </div>
+
+        <div class="period-form-story">
+
+    <div class="period-story-label">
+        What this reveals
+    </div>
+
+    <h4>
+        Gallery locations are concentrated around major urban and regional centres rather than distributed evenly.
+    </h4>
+
+    <p>
+        In the selected location dataset, gallery records cluster strongly along
+        Australia's more populated coastal regions, particularly around the east
+        and south-east. When Victoria is selected, Melbourne has the highest number
+        of recorded gallery locations, followed by smaller concentrations in places
+        such as Parkville and Bendigo.
+    </p>
+
+    <p>
+        This pattern matters for public art collections because the location of
+        galleries affects where audiences are most likely to encounter collected
+        artworks. Larger urban centres can support several institutions within a
+        relatively small area, while regional and remote communities are represented
+        by fewer individual gallery locations.
+    </p>
+
+</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 02 — GALLERY SECTOR
+========================================================= -->
+
+<section class="section section-dark"
+         id="section2">
+
+    <div class="section-number">
+        Section 02 · Collection infrastructure
+    </div>
+
+    <h2>
+        What kind of gallery network supports Australia's public collections?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Australia's visual heritage is preserved through a broad network
+        of cultural institutions. Understanding the scale and composition
+        of this network provides context for the different types of
+        collections explored later in the visualisation.
+    </p>
+
+
+
+    <div class="section2-grid">
+
+
+        <!-- =================================================
+             SECTOR SCALE
+        ================================================== -->
+
+        <div class="visual-card">
+
+            <div class="visual-label">
+                Sector scale
+            </div>
+
+            <h3>
+                How large is the public gallery sector?
+            </h3>
+
+            <p class="visual-description">
+                The Australian Public Galleries Snapshot estimated
+                434 small-to-medium public galleries, with 170 galleries
+                participating in the survey. The survey also demonstrates
+                the considerable quantity and value of cultural material
+                held by the sector.
+            </p>
+
+
+            <div id="sector_scale_chart"
+                 class="chart">
+            </div>
+
+
+
+            <div class="collection-callouts">
+
+
+                <div class="collection-callout">
+
+                    <div class="callout-number">
+                        819,269
+                    </div>
+
+                    <div class="callout-label">
+                        Collection items reported
+                    </div>
+
+                </div>
+
+
+                <div class="collection-callout">
+
+                    <div class="callout-number">
+                        $1.5B
+                    </div>
+
+                    <div class="callout-label">
+                        Estimated collection value
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GALLERY TYPES
+        ================================================== -->
+
+        <div class="visual-card">
+
+            <div class="visual-label">
+                Gallery types
+            </div>
+
+            <h3>
+                What types of institutions preserve public collections?
+            </h3>
+
+            <p class="visual-description">
+                Public and regional galleries make up the largest
+                institutional category in the surveyed sector, while
+                contemporary art spaces, art museums, craft galleries
+                and Aboriginal art centres form smaller groups.
+            </p>
+
+
+            <div id="gallery_types_chart"
+                 class="chart">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SECTION 2 INTERPRETATION
+    ====================================================== -->
+
+    <div class="collections-story-grid">
+
+
+        <div class="collections-story-box light">
+
+            <div class="collections-story-label">
+                A distributed collecting network
+            </div>
+
+            <p>
+                Australia's visual arts heritage is not preserved only
+                by a small number of national institutions. Regional and
+                public galleries form a large part of the sector, meaning
+                public collections are maintained across many communities
+                and geographic areas.
+            </p>
+
+        </div>
+
+
+
+        <div class="collections-story-box dark">
+
+            <div class="collections-story-label">
+                Different institutions, different roles
+            </div>
+
+            <p>
+                The presence of several gallery types suggests that public
+                collection activity occurs within institutions with different
+                purposes and audiences. This creates the foundation for
+                different collecting priorities, themes and areas of
+                specialisation across Australia's gallery network.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 03 — COLLECTION THEMES & CATEGORIES
+========================================================= -->
+
+<section class="section section-identities"
+         id="section3">
+
+    <div class="section-number">
+        Section 03 · Collection themes &amp; categories
+    </div>
+
+    <h2>
+        What do Australian galleries choose to collect and preserve?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Comparing collection themes and artwork categories reveals how
+        galleries construct different versions of visual heritage.
+        Some priorities are shared across major institutions, while
+        other collecting areas distinguish one gallery from another.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 3.1 — CROSS-GALLERY THEMES
+    ====================================================== -->
+
+    <div class="visual-card gallery-theme-card">
+
+        <div class="visual-label">
+            Cross-gallery comparison
+        </div>
+
+        <h3>
+            How do collection themes differ across major Australian galleries?
+        </h3>
+
+        <p class="visual-description">
+            This matrix compares whether six broad collection themes
+            are explicitly identified by six major Australian galleries.
+            It highlights both areas of overlap and areas where institutions
+            communicate more specialised collecting priorities.
+        </p>
+
+
+
+        <div id="gallery_theme_heatmap"
+             class="chart">
+        </div>
+
+
+
+        <div class="theme-legend">
+
+
+            <div class="theme-legend-item">
+
+                <span class="theme-legend-box theme-legend-present"></span>
+
+                Explicitly identified collection theme
+
+            </div>
+
+
+            <div class="theme-legend-item">
+
+                <span class="theme-legend-box theme-legend-neutral"></span>
+
+                Not separately identified in the source used
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="theme-story">
+
+            <h4>
+                Shared responsibilities do not produce identical collections.
+            </h4>
+
+            <p>
+                Australian art and First Nations art are explicitly identified
+                across several major galleries, demonstrating their importance
+                within the way major institutions describe their collections.
+                Asian art, Pacific art, photography and design show greater
+                variation between galleries.
+            </p>
+
+            <p>
+                Importantly, a pale cell does not prove that a gallery holds
+                no works from that theme. It means the theme was not separately
+                identified in the source used for this comparison.
+            </p>
+
+            <p>
+                The pattern therefore shows how galleries communicate
+                different collecting identities while contributing to
+                a broader national record of visual heritage.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 3.2 — QAGOMA TREEMAP
+    ====================================================== -->
+
+    <div class="visual-card qagoma-theme-card">
+
+        <div class="visual-label">
+            Artwork categories · case study
+        </div>
+
+        <h3>
+            What artwork categories make up the QAGOMA Collection?
+        </h3>
+
+        <p class="visual-subtitle">
+            A detailed case study of one Australian public collection
+        </p>
+
+        <p class="visual-description">
+            The QAGOMA case study moves from broad cross-gallery themes
+            to individual artwork categories. Each rectangle represents
+            a physical artwork category, while the label reports the
+            number of works recorded in that category.
+        </p>
+
+
+
+        <div id="qagoma_treemap"
+             class="chart">
+        </div>
+
+
+
+        <div class="qagoma-theme-note">
+
+            <div class="qagoma-theme-note-label">
+                Inside QAGOMA
+            </div>
+
+            <h4>
+                A few major forms coexist with many specialised categories.
+            </h4>
+
+            <p>
+                Prints and paintings form the two largest recorded physical
+                categories, followed by photographs, drawings, ceramics
+                and sculpture. A longer tail of categories including
+                textiles, jewellery, installation, metalwork, furniture
+                and film broadens the range of artistic media represented.
+            </p>
+
+            <p>
+                The pattern suggests that QAGOMA's visual record is not
+                defined by one medium alone. Large traditional categories
+                sit beside smaller and more specialised artistic forms.
+            </p>
+
+            <p class="case-study-note">
+                Rectangle size uses a compressed scaling treatment so
+                smaller categories remain visible. Labels display the
+                original artwork counts.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 3.3 — DEPARTMENT × CATEGORY
+    ====================================================== -->
+
+    <div class="visual-card department-category-card">
+
+        <div class="visual-label">
+            Internal collection structure · case study
+        </div>
+
+        <h3>
+            How are artwork categories distributed across QAGOMA collecting areas?
+        </h3>
+
+        <p class="visual-description">
+            The heatmap compares artwork categories within QAGOMA's
+            collecting departments. Darker cells represent categories
+            that account for a larger share of a collecting area,
+            while lighter cells indicate a smaller share.
+        </p>
+
+
+
+        <div id="department_category_heatmap"
+             class="chart">
+        </div>
+
+
+
+        <div class="department-story">
+
+            <div class="department-story-label">
+                Reading the collection
+            </div>
+
+            <h4>
+                Different collecting areas emphasise different combinations of media.
+            </h4>
+
+            <p>
+                Artwork forms are not distributed uniformly throughout
+                the collection. Some categories are concentrated within
+                particular collecting areas, while others are represented
+                across several departments.
+            </p>
+
+            <p>
+                This internal variation helps explain how one gallery can
+                contain several collecting identities at once. Australia's
+                visual heritage can therefore be organised not only by
+                period or culture, but also through different media and
+                departmental collecting traditions.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SECTION 3 TAKEAWAY
+    ====================================================== -->
+
+    <div class="identity-takeaway">
+
+        <h4>
+            Australia's visual heritage is preserved through both shared
+            themes and distinctive collection identities.
+        </h4>
+
+        <p>
+            The cross-gallery comparison reveals overlap in important
+            collecting themes, but also clear differences between institutions.
+            The QAGOMA case study shows how those broad priorities become
+            visible at the level of individual artwork categories and
+            specialised collecting areas.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 04 — PRESERVATION & ACCESS
+========================================================= -->
+
+<section class="section section-collections"
+         id="section4">
+
+    <div class="section-number">
+        Section 04 · Preserving the collection
+    </div>
+
+    <h2>
+        How is visual heritage preserved and made accessible?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Collection themes and artwork categories describe what galleries
+        preserve. Stewardship determines whether those works can continue
+        to function as part of Australia's visual heritage. Permanent
+        collections, digitisation and online access provide different
+        forms of long-term preservation and public visibility.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 4.1
+    ====================================================== -->
+
+    <div class="visual-card collection-permanent-card">
+
+        <div class="visual-label">
+            Long-term stewardship
+        </div>
+
+        <h3>
+            How common are permanent collections?
+        </h3>
+
+        <p class="visual-description">
+            The survey indicates that permanent collecting is common
+            among public galleries. Each square represents one percentage
+            point, comparing galleries that report holding a permanent
+            collection with those that do not.
+        </p>
+
+
+
+        <div class="waffle-layout">
+
+
+            <div id="collection_waffle"
+                 class="chart">
+            </div>
+
+
+
+            <div class="waffle-note">
+
+                <div class="waffle-note-label">
+                    What this means for visual heritage
+                </div>
+
+                <h4>
+                    Most surveyed galleries act as long-term custodians.
+                </h4>
+
+                <p>
+                    Around 72% of surveyed galleries report holding
+                    a permanent collection, compared with 28% that do not.
+                    This supports the role of galleries as institutions that
+                    retain artworks and cultural material beyond individual
+                    exhibitions.
+                </p>
+
+                <div class="waffle-highlight">
+
+                    <span>
+                        72%
+                    </span>
+
+                    hold a permanent collection
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 4.2
+    ====================================================== -->
+
+    <div class="visual-card collection-access-card">
+
+        <div class="visual-label">
+            Digital preservation &amp; access
+        </div>
+
+        <h3>
+            Does digitisation make public collections accessible online?
+        </h3>
+
+        <p class="visual-description">
+            Digital documentation can support preservation and collection
+            management, but digitised material is not necessarily made
+            publicly available. Comparing the two measures reveals the
+            difference between recording a collection and providing
+            digital public access to it.
+        </p>
+
+
+
+        <div class="collection-access-layout">
+
+
+            <div class="collection-access-chart-area">
+
+                <div id="collection_access_chart">
+                </div>
+
+            </div>
+
+
+
+            <div class="collection-access-note">
+
+                <div class="collection-access-note-label">
+                    Preservation versus access
+                </div>
+
+                <h4>
+                    Digital preservation does not automatically equal public access.
+                </h4>
+
+                <p>
+                    The survey reports 74% of collection material as
+                    digitised, compared with 35% available online.
+                    The difference shows that a substantial amount of
+                    digitally recorded collection material remains unavailable
+                    through public online access.
+                </p>
+
+
+                <div class="access-highlight">
+
+                    <span>
+                        39
+                    </span>
+
+                    percentage-point gap between digitisation
+                    and online access
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SECTION 4 TAKEAWAY
+    ====================================================== -->
+
+    <div class="collection-section-takeaway">
+
+        <div class="collection-takeaway-label">
+            The bigger picture
+        </div>
+
+        <h4>
+            Preserving visual heritage and providing access to it are
+            related, but they are not the same task.
+        </h4>
+
+        <p>
+            Permanent collections establish long-term custodianship,
+            while digitisation creates another layer of documentation.
+            However, the access gap demonstrates that preservation alone
+            does not guarantee that audiences can encounter collection
+            material online.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 05 — ARTISTIC PERIODS
+========================================================= -->
+
+<section class="section section-dark section-periods"
+         id="section5">
+
+    <div class="section-number">
+        Section 05 · Artistic periods
+    </div>
+
+    <h2>
+        Which artistic periods are represented across Australian galleries?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Artistic period provides another way to compare public collections.
+        By examining the creation dates of acquired works, we can see how
+        galleries combine contemporary collecting with works from earlier
+        periods of artistic production.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 5.1
+    ====================================================== -->
+
+    <div class="visual-card artistic-period-card">
+
+        <div class="visual-label">
+            Cross-gallery period comparison
+        </div>
+
+        <h3>
+            Which creation periods appear in 2020–21 acquisitions?
+        </h3>
+
+        <p class="visual-subtitle">
+            Dated acquisition records from NGV, NGA, QAGOMA and AGNSW
+        </p>
+
+        <p class="visual-description">
+            The chart compares the period composition of usable dated
+            acquisition records across four major Australian galleries.
+            Percentages are used so institutions with different numbers
+            of dated acquisition records can be compared on the same scale.
+        </p>
+
+
+
+        <div id="gallery_artistic_periods_chart"
+             class="chart">
+        </div>
+
+
+
+        <div class="period-legend">
+
+
+            <div class="period-legend-item">
+                <span class="period-box period-before1900"></span>
+                Before 1900
+            </div>
+
+            <div class="period-legend-item">
+                <span class="period-box period-1900"></span>
+                1900–1949
+            </div>
+
+            <div class="period-legend-item">
+                <span class="period-box period-1950"></span>
+                1950–1979
+            </div>
+
+            <div class="period-legend-item">
+                <span class="period-box period-1980"></span>
+                1980–1999
+            </div>
+
+            <div class="period-legend-item">
+                <span class="period-box period-2000"></span>
+                2000–2021
+            </div>
+
+
+        </div>
+
+
+
+        <div class="period-story">
+
+            <div class="period-story-label">
+                What the comparison reveals
+            </div>
+
+            <h4>
+                Recent acquisitions contain both contemporary and historical works,
+                but the balance differs between galleries.
+            </h4>
+
+            <p>
+                Works created between 2000 and 2021 form the largest share
+                of usable dated acquisition records for NGV, QAGOMA and AGNSW.
+                NGA shows a more balanced profile, with a particularly substantial
+                share from 1950–1979 as well as contemporary works.
+            </p>
+
+            <p>
+                AGNSW records the largest proportion of pre-1900 works among
+                these four acquisition datasets. These differences demonstrate
+                that major galleries can contribute to Australia's visual
+                heritage through different combinations of historical and
+                contemporary collecting.
+            </p>
+
+        </div>
+
+
+
+        <div class="period-method-note">
+
+            <div class="period-method-label">
+                Comparison basis
+            </div>
+
+            <p>
+                This chart represents dated artworks listed in official
+                2020–21 acquisition records; it does not describe the complete
+                historical collections of the four galleries. Records without
+                a usable creation date were excluded from the percentage
+                calculation.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 5.2
+    ====================================================== -->
+
+    <div class="visual-card period-form-card">
+
+        <div class="visual-label">
+            Artwork category by period · case study
+        </div>
+
+        <h3>
+            How do artistic forms differ across creation periods?
+        </h3>
+
+        <p class="visual-subtitle">
+            Artwork categories across creation periods in the QAGOMA Collection
+        </p>
+
+        <p class="visual-description">
+            This chart examines the current QAGOMA Collection by grouping
+            artworks according to their recorded creation period and physical
+            category. It compares how strongly different artwork forms are
+            represented within each period.
+        </p>
+
+
+
+        <div class="period-chart-layout">
+
+
+            <!-- FILTER -->
+
+            <div class="period-filter-panel">
+
+                <div class="period-filter-label">
+                    Explore artwork forms
+                </div>
+
+                <p class="period-filter-help">
+                    Select a category to follow its representation
+                    across creation periods.
+                </p>
+
+
+
+                <div class="period-filter-buttons">
+
+
+                    <button class="period-filter-btn active"
+                            data-category="All">
+                        All forms
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Painting">
+                        Painting
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Print">
+                        Print
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Photograph">
+                        Photograph
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Drawing">
+                        Drawing
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Sculpture">
+                        Sculpture
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Ceramic">
+                        Ceramic
+                    </button>
+
+
+                    <button class="period-filter-btn"
+                            data-category="Other">
+                        Other
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHART -->
+
+            <div class="period-chart-area">
+
+                <div id="qagoma_period_artwork_forms"
+                     class="chart">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="period-form-story">
+
+            <h4>
+                The mix of artwork forms differs substantially between creation periods.
+            </h4>
+
+            <p>
+                Print accounts for its highest share in works from
+                1950–1979, while photography has a larger share in
+                1980–1999 than in the earlier periods shown.
+            </p>
+
+            <p>
+                Works created between 2000 and 2024 show a different
+                composition: sculpture has a larger share than in several
+                earlier periods, while the combined “Other” category accounts
+                for almost 30%. This indicates that QAGOMA's representation
+                of more recent artistic production extends across a broad
+                range of media.
+            </p>
+
+            <p>
+                These patterns describe the composition of the collection
+                by artwork creation period. They should not be interpreted
+                as a historical record of how QAGOMA's collection itself
+                changed at each point in time.
+            </p>
+
+        </div>
+
+
+
+        <div class="period-method-note">
+
+            <div class="period-method-label">
+                About this comparison
+            </div>
+
+            <p>
+                Artwork creation periods were derived from QAGOMA's
+                <em>DateCreated</em> field. Painting, Print, Photograph,
+                Drawing, Sculpture and Ceramic are shown separately,
+                while remaining physical categories are grouped as
+                “Other”. Records without a usable creation date or
+                category were excluded.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SECTION 5 TAKEAWAY
+    ====================================================== -->
+
+    <div class="period-takeaway">
+
+        <div class="period-takeaway-label">
+            What artistic periods tell us
+        </div>
+
+        <h4>
+            Australia's visual heritage is represented through multiple
+            generations of artistic production rather than one single period.
+        </h4>
+
+        <p>
+            The acquisition comparison shows that contemporary art plays
+            an important role in recent collecting, while historical works
+            remain present. The QAGOMA case study further demonstrates
+            that different periods contain different combinations of media.
+            Together, period and category reveal two complementary dimensions
+            of how public collections represent visual heritage.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 06 — BUILDING THE COLLECTION
+========================================================= -->
+
+<section class="section section-collection-growth"
+         id="section6">
+
+    <div class="section-number">
+        Section 06 · Building the collection
+    </div>
+
+    <h2>
+        How can one public collection bring past and present together?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        A public collection is not created at one moment. It develops
+        through repeated acquisition decisions. The QAGOMA case study
+        examines when artworks entered the collection and how long after
+        creation they were acquired, showing how contemporary and
+        retrospective collecting can exist within the same institution.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 6.1
+    ====================================================== -->
+
+    <div class="visual-card acquisition-timeline-card">
+
+        <div class="visual-label">
+            Acquisition history · case study
+        </div>
+
+        <h3>
+            When did artworks enter the QAGOMA Collection?
+        </h3>
+
+        <p class="visual-subtitle">
+            Recorded acquisitions grouped by decade
+        </p>
+
+        <p class="visual-description">
+            Grouping QAGOMA's recorded acquisition dates by decade
+            reveals when the collection expanded most strongly.
+            This is a history of acquisition activity rather than
+            a timeline of when the artworks themselves were created.
+        </p>
+
+
+
+        <div id="qagoma_acquisition_timeline"
+             class="chart">
+        </div>
+
+
+
+        <div class="period-form-story">
+
+            <div class="period-story-label">
+                Building a public collection
+            </div>
+
+            <h4>
+                Recorded acquisition activity expanded strongly from the late twentieth century.
+            </h4>
+
+            <p>
+                Acquisition totals increase substantially from the 1970s
+                onward and reach their highest recorded decade in the 2010s.
+                This demonstrates how a public collection can accumulate
+                progressively over many decades.
+            </p>
+
+            <p>
+                The result also helps distinguish two ideas:
+                an artwork's creation period and the date on which a gallery
+                chooses to acquire it. A gallery can therefore expand a
+                collection today while collecting work from either the present
+                or much earlier artistic periods.
+            </p>
+
+            <p class="case-study-note">
+                The 2020s figure covers acquisitions only through
+                December 2024 and therefore represents an incomplete decade.
+                It should not be interpreted as evidence of a full-decade decline.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 6.2
+    ====================================================== -->
+
+    <div class="visual-card acquisition-lag-card">
+
+        <div class="visual-label">
+            Creation to acquisition · case study
+        </div>
+
+        <h3>
+            How soon after creation do artworks enter the collection?
+        </h3>
+
+        <p class="visual-subtitle">
+            Time between recorded creation year and acquisition
+        </p>
+
+        <p class="visual-description">
+            Comparing creation year with acquisition year distinguishes
+            works collected relatively close to the time of production
+            from works acquired retrospectively many years later.
+        </p>
+
+
+
+        <div id="qagoma_acquisition_lag"
+             class="chart">
+        </div>
+
+
+
+        <div class="period-form-story">
+
+            <div class="period-story-label">
+                Contemporary and retrospective collecting
+            </div>
+
+            <h4>
+                The collection combines recently produced works with artworks acquired much later.
+            </h4>
+
+            <p>
+                Around 41.8% of artworks with usable dates entered
+                the collection within five years of their recorded
+                creation year. This indicates a substantial connection
+                between acquisition activity and relatively recent artistic
+                production.
+            </p>
+
+            <p>
+                At the same time, approximately 24.7% were acquired
+                more than fifty years after creation. Retrospective
+                acquisitions allow earlier artistic production to become
+                part of a collection even when those works were not
+                collected close to the time they were made.
+            </p>
+
+        </div>
+
+
+
+        <div class="period-method-note">
+
+            <div class="period-method-label">
+                About this analysis
+            </div>
+
+            <p>
+                Acquisition year was derived from QAGOMA's
+                <em>AcquiredDate</em> field and compared with the first
+                usable year recorded in <em>DateCreated</em>. Records
+                without both usable dates were excluded.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SECTION 6 TAKEAWAY
+    ====================================================== -->
+
+    <div class="period-takeaway">
+
+        <div class="period-takeaway-label">
+            What collection growth reveals
+        </div>
+
+        <h4>
+            Visual heritage can be built through both immediate and retrospective collecting.
+        </h4>
+
+        <p>
+            The QAGOMA case study shows that a public collection can
+            represent different periods not only because works were
+            produced at different times, but also because galleries can
+            acquire older works long after their creation. 
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 07 — CULTURAL CONNECTIONS
+========================================================= -->
+
+<section class="section section-dark section-cultural-connections"
+         id="section7">
+
+    <div class="section-number">
+        Section 07 · Cultural connections
+    </div>
+
+    <h2>
+        How geographically diverse are the artists represented in one public collection?
+    </h2>
+
+    <div class="section-line"></div>
+
+    <p class="section-intro">
+        Collection themes, categories and artistic periods reveal what
+        galleries preserve. Artist geographic associations provide another
+        perspective on collection diversity. The QAGOMA Artists and
+        Organisations dataset allows one collection to be examined through
+        the places associated with its represented artists.
+    </p>
+
+
+
+    <!-- =====================================================
+         CHART 7.1 — WORLD
+    ====================================================== -->
+
+    <div class="visual-card cultural-world-card">
+
+        <div class="visual-label">
+            Artist geography · case study
+        </div>
+
+        <h3>
+            Which countries are associated with artists represented in QAGOMA?
+        </h3>
+
+        <p class="visual-subtitle">
+            Geographic associations recorded in the QAGOMA Artists and Organisations dataset
+        </p>
+
+        <p class="visual-description">
+            The map shows recorded country associations for person records
+            represented in the dataset. Darker countries have larger numbers
+            of recorded associations. A logarithmic colour scale allows
+            countries with smaller counts to remain visually distinguishable
+            despite Australia's much larger total.
+        </p>
+
+
+
+        <div class="world-map-main">
+
+            <div id="qagoma_artist_world_map"
+                 class="chart">
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             REGIONAL VIEWS
+        ================================================== -->
+
+        <div class="regional-detail-header">
+
+            <div>
+
+                <div class="regional-detail-label">
+                    Regional detail
+                </div>
+
+                <h4>
+                    Looking beyond the dominant Australian representation
+                </h4>
+
+            </div>
+
+
+            <p>
+                Smaller countries are difficult to distinguish on the
+                global map. These regional views use the same underlying
+                association data to make international patterns easier
+                to inspect.
+            </p>
+
+        </div>
+
+
+
+        <div class="regional-map-grid">
+
+
+            <!-- ASIA PACIFIC -->
+
+            <div class="regional-map-box">
+
+                <div class="regional-map-top">
+
+                    <span class="regional-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <div class="regional-map-kicker">
+                            Regional view
+                        </div>
+
+                        <h5>
+                            Asia &amp; Pacific
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <div id="qagoma_artist_asia_map"
+                     class="regional-map-chart">
+                </div>
+
+
+                <p>
+                    Recorded associations extend across East Asia,
+                    South Asia, Southeast Asia and Pacific countries.
+                </p>
+
+            </div>
+
+
+
+            <!-- EUROPE -->
+
+            <div class="regional-map-box">
+
+                <div class="regional-map-top">
+
+                    <span class="regional-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <div class="regional-map-kicker">
+                            Regional view
+                        </div>
+
+                        <h5>
+                            Europe
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <div id="qagoma_artist_europe_map"
+                     class="regional-map-chart">
+                </div>
+
+
+                <p>
+                    The dataset also records substantial geographic
+                    connections with the United Kingdom and continental Europe.
+                </p>
+
+            </div>
+
+
+
+            <!-- AMERICAS -->
+
+            <div class="regional-map-box">
+
+                <div class="regional-map-top">
+
+                    <span class="regional-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <div class="regional-map-kicker">
+                            Regional view
+                        </div>
+
+                        <h5>
+                            The Americas
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <div id="qagoma_artist_americas_map"
+                     class="regional-map-chart">
+                </div>
+
+
+                <p>
+                    Artist-place associations also extend across
+                    North and South America.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="cultural-story">
+
+            <div class="cultural-story-label">
+                Reading the global pattern
+            </div>
+
+            <h4>
+                Australian representation exists within a much broader geographic network.
+            </h4>
+
+            <p>
+                Australia has by far the largest number of recorded
+                associations, but QAGOMA's artist records also connect
+                the collection with countries across Asia, Europe,
+                the Pacific, the Americas and other regions.
+            </p>
+
+            <p>
+                This does not measure artistic “influence” or cultural
+                importance. Instead, it demonstrates the geographic breadth
+                of artist associations represented within one Australian
+                public collection.
+            </p>
+
+        </div>
+        <div class="period-method-note">
+
+    <div class="period-method-label">
+        How to read this choropleth
+    </div>
+
+    <p>
+        The values shown on this map should not be interpreted as an absolute
+        measure of a country's artistic importance or influence. Instead, the map
+        represents how strongly each country appears within the QAGOMA Artists and
+        Organisations dataset.
+    </p>
+
+    <p>
+        The map compares each country's share of the artists
+        represented in the dataset rather than the size of that country's
+        general population.
+    </p>
+
+    <p>
+        The choropleth itself uses the <strong>number of recorded artist
+        associations</strong> to determine colour intensity. Countries with more
+        recorded artists appear darker, while countries with fewer recorded
+        artists appear lighter.
+    </p>
+
+</div>
+        
+    </div>
+
+
+
+    <!-- =====================================================
+         CHART 7.2 — AUSTRALIA
+    ====================================================== -->
+
+    <div class="visual-card cultural-australia-card">
+
+        <div class="visual-label">
+            Australian artist geography · case study
+        </div>
+
+        <h3>
+            How are Australian artist associations distributed across states and territories?
+        </h3>
+
+        <p class="visual-subtitle">
+            Recorded Australian geographic associations in the QAGOMA dataset
+        </p>
+
+        <p class="visual-description">
+            Looking within Australia reveals how recorded artist associations
+            are distributed geographically. Circle area represents the number
+            of associations linked with each state or territory.
+        </p>
+
+
+
+        <div class="australia-feature-layout">
+
+
+            <!-- MAP -->
+
+            <div class="australia-feature-map">
+
+                <div id="qagoma_artist_australia_map"
+                     class="chart">
+                </div>
+
+                <div class="symbol-map-note">
+
+                    <span></span>
+
+                    Circle area represents recorded artist associations
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INSIGHT -->
+
+            <div class="australia-insight-panel">
+
+                <div class="australia-insight-eyebrow">
+                    Strongest recorded association
+                </div>
+
+
+
+                <div class="australia-primary-stat">
+
+                    <div class="australia-primary-state">
+                        Queensland
+                    </div>
+
+                    <div class="australia-primary-number">
+                        885
+                    </div>
+
+                    <div class="australia-primary-label">
+                        recorded artist associations
+                    </div>
+
+                </div>
+
+
+
+                <div class="australia-mini-stats">
+
+
+                    <div class="australia-mini-stat">
+                        <span>NSW</span>
+                        <strong>557</strong>
+                    </div>
+
+
+                    <div class="australia-mini-stat">
+                        <span>VIC</span>
+                        <strong>552</strong>
+                    </div>
+
+
+                    <div class="australia-mini-stat">
+                        <span>NT</span>
+                        <strong>532</strong>
+                    </div>
+
+
+                </div>
+
+
+                <div class="australia-insight-line"></div>
+
+
+                <p>
+                    Queensland records the largest number of associations
+                    in this dataset, followed by substantial totals for
+                    New South Wales, Victoria and the Northern Territory.
+                </p>
+
+                <p>
+                    Recorded associations also extend to Western Australia,
+                    South Australia, the Australian Capital Territory
+                    and Tasmania, giving the collection a geographically
+                    broad Australian profile.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="cultural-story">
+
+            <div class="cultural-story-label">
+                National representation
+            </div>
+
+            <h4>
+                The Australian component of the collection is geographically distributed rather than centred in only one state.
+            </h4>
+
+            <p>
+                The counts vary substantially, but every Australian state
+                and territory represented in the cleaned dataset contributes
+                to the collection's geographic profile. This adds another
+                dimension to understanding the diversity of Australia's
+                visual heritage alongside themes, periods and artwork forms.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FINAL CONCLUSION
+    ====================================================== -->
+
+    <div class="final-heritage-takeaway">
+
+    <div class="final-heritage-label">
+        Conclusion · Australia's visual arts heritage
+    </div>
+
+    <h3>
+        Australia's visual arts heritage is preserved collectively,
+        but represented differently across public galleries.
+    </h3>
+
+    <p>
+        Across the visualisation, the charts show that Australia's public
+        gallery network is geographically widespread but unevenly distributed.
+        These institutions support the preservation of visual heritage through
+        permanent collections, collection management and increasing levels of
+        digitisation and public access.
+    </p>
+
+    <p>
+        More importantly, comparisons between major galleries reveal that
+        their collections are not identical. Shared themes such as Australian
+        and First Nations art appear across several institutions, while other
+        collecting areas vary. Artistic-period comparisons also show different
+        balances between historical and contemporary works, demonstrating how
+        each gallery develops its own collecting priorities.
+    </p>
+
+    <p>
+        The QAGOMA case study adds further detail by showing how artwork
+        categories, collecting departments, acquisition timing and artist
+        geographic associations contribute to the structure of one public
+        collection. Together, these patterns show that Australia's visual arts
+        heritage is not represented through one single collection or timeline,
+        but through multiple galleries whose different themes, periods, media
+        and collecting decisions preserve complementary parts of Australia's
+        artistic record.
+    </p>
+
+</div>
+
+<!-- =====================================================
+     SOURCES
+====================================================== -->
+
+<div class="sources-section">
+
+    <div class="sources-label">
+        Sources
+    </div>
+
+    <h3>
+        References
+    </h3>
+
+    <div class="sources-list">
+
+        <p>
+            Art Gallery of New South Wales. (2021).
+            <em>Art Gallery of New South Wales annual report 2020–21</em>.
+            <a href="https://wayback.archive-it.org/22771/20240425161837/https://media.opengov.nsw.gov.au/pairtree_root/7c/ce/89/1c/70/64/4e/02/a5/4f/30/cf/56/d8/10/8e/obj/AGNSW_Annual_Report_20_21_211026_Final_Online.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://wayback.archive-it.org/22771/20240425161837/https://media.opengov.nsw.gov.au/pairtree_root/7c/ce/89/1c/70/64/4e/02/a5/4f/30/cf/56/d8/10/8e/obj/AGNSW_Annual_Report_20_21_211026_Final_Online.pdf
+            </a>
+        </p>
+
+        <p>
+            Art Gallery of South Australia. (n.d.).
+            <em>About the collection</em>.
+            <a href="https://www.agsa.sa.gov.au/collection-publications/about/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.agsa.sa.gov.au/collection-publications/about/
+            </a>
+        </p>
+
+        <p>
+            Art Gallery of Western Australia. (n.d.).
+            <em>AGWA collection</em>.
+            <a href="https://artgallery.wa.gov.au/discover/collections/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://artgallery.wa.gov.au/discover/collections/
+            </a>
+        </p>
+
+        <p>
+            artsACT. (n.d.).
+            <em>Local makers, shops and galleries</em>. ACT Government.
+            <a href="https://www.arts.act.gov.au/support-our-local-artists/shop-local-listing"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.arts.act.gov.au/support-our-local-artists/shop-local-listing
+            </a>
+        </p>
+
+        <p>
+            Australian Bureau of Statistics. (2021, July 20).
+            <em>Digital boundary files: Australian Statistical Geography Standard (ASGS), Edition 3, July 2021–June 2026</em>.
+            <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files
+            </a>
+        </p>
+
+        <p>
+            City of Melbourne. (2023, March 7).
+            <em>Public artworks, fountains and monuments</em> [Data set]. DataVic.
+            <a href="https://discover.data.vic.gov.au/en_AU/dataset/public-artworks-fountains-and-monuments"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://discover.data.vic.gov.au/en_AU/dataset/public-artworks-fountains-and-monuments
+            </a>
+        </p>
+
+        <p>
+            Contemporary Art Tasmania. (n.d.).
+            <em>Tasmania public galleries directory</em>.
+            <a href="https://contemporaryarttasmania.org/public-galleries-tasmania/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://contemporaryarttasmania.org/public-galleries-tasmania/
+            </a>
+        </p>
+
+        <p>
+            Museums &amp; Galleries of NSW. (n.d.).
+            <em>Regional and public galleries of NSW</em>.
+            <a href="https://mgnsw.org.au/organisations/?categories=regional-galleries"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://mgnsw.org.au/organisations/?categories=regional-galleries
+            </a>
+        </p>
+
+        <p>
+            Museums &amp; Galleries Queensland. (n.d.).
+            <em>Museum &amp; gallery directory</em>.
+            <a href="https://magsq.com.au/museum-gallery-directory/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://magsq.com.au/museum-gallery-directory/
+            </a>
+        </p>
+
+        <p>
+            Museums &amp; Galleries Queensland, &amp; Public Galleries Association of Victoria. (2021).
+            <em>Australian public galleries snapshot 2019</em>. National Public Galleries Alliance.
+            <a href="https://magsq.com.au/wp-content/uploads/2021/02/2019-Australian-Public-Galleries-Snapshot.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://magsq.com.au/wp-content/uploads/2021/02/2019-Australian-Public-Galleries-Snapshot.pdf
+            </a>
+        </p>
+
+        <p>
+            National Gallery of Australia. (n.d.).
+            <em>Art &amp; artists</em>.
+            <a href="https://nga.gov.au/art-artists/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://nga.gov.au/art-artists/
+            </a>
+        </p>
+
+        <p>
+            National Gallery of Australia. (2021).
+            <em>Annual report 2020–21</em>.
+            <a href="https://nga.gov.au/media/dd/documents/nga_ar_20-21.29b40e7.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://nga.gov.au/media/dd/documents/nga_ar_20-21.29b40e7.pdf
+            </a>
+        </p>
+
+        <p>
+            National Gallery of Victoria. (n.d.).
+            <em>Collection areas</em>.
+            <a href="https://www.ngv.vic.gov.au/explore/collection/collection-areas/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.ngv.vic.gov.au/explore/collection/collection-areas/
+            </a>
+        </p>
+
+        <p>
+            National Gallery of Victoria Foundation. (2021).
+            <em>NGV Foundation annual report 2020–21</em>. National Gallery of Victoria.
+            <a href="https://www.ngv.vic.gov.au/wp-content/uploads/2021/12/NGV-Foundation-Annual-Report-2020-21.pdf?x14360="
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.ngv.vic.gov.au/wp-content/uploads/2021/12/NGV-Foundation-Annual-Report-2020-21.pdf
+            </a>
+        </p>
+
+        <p>
+            Northern Territory Government. (n.d.).
+            <em>Arts and culture centres</em>.
+            <a href="https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/arts-and-culture-centres"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/arts-and-culture-centres
+            </a>
+        </p>
+
+        <p>
+            Pollock, J. (1952).
+            <em>Blue poles</em> [Oil, enamel, aluminium paint and glass on canvas]. National Gallery of Australia.
+            <a href="https://searchthecollection.nga.gov.au/object/36334"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://searchthecollection.nga.gov.au/object/36334
+            </a>
+        </p>
+
+        <p>
+            Public Galleries Association of Victoria. (n.d.).
+            <em>Galleries in Victoria: Search on a map</em>.
+            <a href="https://pgav.org.au/Public-Gallery-Map~14344"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://pgav.org.au/Public-Gallery-Map~14344
+            </a>
+        </p>
+
+        <p>
+            Queensland Art Gallery Board of Trustees. (2021).
+            <em>Annual report 2020–21</em>. Queensland Art Gallery | Gallery of Modern Art.
+            <a href="https://www.parliament.qld.gov.au/Work-of-the-Assembly/Tabled-Papers/docs/5721t1543/5721t1543.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.parliament.qld.gov.au/Work-of-the-Assembly/Tabled-Papers/docs/5721t1543/5721t1543.pdf
+            </a>
+        </p>
+
+        <p>
+            Queensland Government. (2024).
+            <em>QAGOMA collection</em> [Data set]. Open Data Portal.
+            <a href="https://www.data.qld.gov.au/dataset/qagoma-collection"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.data.qld.gov.au/dataset/qagoma-collection
+            </a>
+        </p>
+
+        <p>
+            Queensland Government. (2024).
+            <em>QAGOMA collection artworks – December 2024 API CSV</em> [Data set]. Open Data Portal.
+            <a href="https://www.data.qld.gov.au/dataset/qagoma-collection/resource/9fd5697c-8e26-44f6-b8ad-2fef67615253?inner_span=True"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.data.qld.gov.au/dataset/qagoma-collection/resource/9fd5697c-8e26-44f6-b8ad-2fef67615253?inner_span=True
+            </a>
+        </p>
+
+        <p>
+            Queensland Government. (2024).
+            <em>QAGOMA artists and organisations – December 2024</em> [Data set]. Open Data Portal.
+            <a href="https://www.data.qld.gov.au/dataset/qagoma-artists-and-organisations/resource/7bcfa846-fe51-42ab-8096-f6406cb0f39f"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.data.qld.gov.au/dataset/qagoma-artists-and-organisations/resource/7bcfa846-fe51-42ab-8096-f6406cb0f39f
+            </a>
+        </p>
+
+        <p>
+            Queensland Art Gallery | Gallery of Modern Art. (n.d.).
+            <em>QAGOMA collection online</em>.
+            <a href="https://collection.qagoma.qld.gov.au/"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://collection.qagoma.qld.gov.au/
+            </a>
+        </p>
+
+        <p>
+            Regional Galleries Association of South Australia. (n.d.).
+            <em>Our member galleries</em>.
+            <a href="https://www.rgasa.org.au/members"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://www.rgasa.org.au/members
+            </a>
+        </p>
+
+        <p>
+            Western Australian Government. (n.d.).
+            <em>Western Australian Creative Places Map</em>. Creative Industries, Tourism and Sport.
+            <a href="https://cits.wa.gov.au/creative-industries/western-australian-creative-places-map"
+               target="_blank"
+               rel="noopener noreferrer">
+                https://cits.wa.gov.au/creative-industries/western-australian-creative-places-map
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <h2>
+        From Gallery to Gallery
+    </h2>
+
+    <p>
+        Exploring Australia's visual arts heritage through its public collections.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   SECTION 1 — GALLERY COMPARISON
+========================================================= */
+
+vegaEmbed(
+    "#gallery_comparison",
+    "js/gallery_comparison.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 1 — STATE EXPLORER
+========================================================= */
+
+const stateNames = {
+
+    NSW: "New South Wales",
+    VIC: "Victoria",
+    QLD: "Queensland",
+    SA: "South Australia",
+    WA: "Western Australia",
+    TAS: "Tasmania",
+    NT: "Northern Territory",
+    ACT: "Australian Capital Territory"
+
+};
+
+
+let galleryRecords = [];
+
+
+function normaliseState(value) {
+
+    const text = String(value || "").trim();
+
+    if (stateNames[text.toUpperCase()]) {
+
+        return text.toUpperCase();
+
+    }
+
+    const match = Object.keys(stateNames).find(
+
+        key =>
+            stateNames[key].toLowerCase() ===
+            text.toLowerCase()
+
+    );
+
+    return match || text.toUpperCase();
+
+}
+
+
+
+async function updateStateExplorer(selectedState) {
+
+    const code =
+        normaliseState(selectedState);
+
+
+    const records =
+        galleryRecords.filter(
+
+            row =>
+                normaliseState(row.state) === code
+
+        );
+
+
+    document.getElementById(
+        "explorer-state-name"
+    ).textContent =
+        stateNames[code] ||
+        selectedState;
+
+
+    document.getElementById(
+        "explorer-gallery-count"
+    ).textContent =
+        records.length;
+
+
+
+    const cityCounts =
+        new Map();
+
+
+    records.forEach(row => {
+
+        const city =
+            String(row.city || "").trim();
+
+        if (city) {
+
+            cityCounts.set(
+
+                city,
+
+                (cityCounts.get(city) || 0) + 1
+
+            );
+
+        }
+
+    });
+
+
+
+    document.getElementById(
+        "explorer-city-count"
+    ).textContent =
+        cityCounts.size;
+
+
+
+    const topCities =
+        [...cityCounts.entries()]
+
+            .map(
+                ([city, count]) => ({
+                    city,
+                    count
+                })
+            )
+
+            .sort(
+                (a, b) =>
+                    b.count - a.count ||
+                    a.city.localeCompare(b.city)
+            )
+
+            .slice(0, 5);
+
+
+
+    const chartSpec = {
+
+        "$schema":
+            "https://vega.github.io/schema/vega-lite/v5.json",
+
+        "width":
+            "container",
+
+        "height":
+            260,
+
+        "data": {
+            "values":
+                topCities
+        },
+
+
+        "layer": [
+
+
+            {
+
+                "mark": {
+
+                    "type":
+                        "bar",
+
+                    "color":
+                        "#B66A49",
+
+                    "cornerRadiusEnd":
+                        4
+
+                },
+
+
+                "encoding": {
+
+
+                    "y": {
+
+                        "field":
+                            "city",
+
+                        "type":
+                            "nominal",
+
+                        "sort":
+                            "-x",
+
+                        "axis": {
+
+                            "title":
+                                null,
+
+                            "labelFontSize":
+                                12,
+
+                            "labelLimit":
+                                145
+
+                        }
+
+                    },
+
+
+                    "x": {
+
+                        "field":
+                            "count",
+
+                        "type":
+                            "quantitative",
+
+                        "axis": {
+
+                            "title":
+                                "Gallery records",
+
+                            "tickMinStep":
+                                1,
+
+                            "format":
+                                "d"
+
+                        }
+
+                    },
+
+
+                    "tooltip": [
+
+                        {
+
+                            "field":
+                                "city",
+
+                            "title":
+                                "City / Suburb"
+
+                        },
+
+                        {
+
+                            "field":
+                                "count",
+
+                            "title":
+                                "Gallery records"
+
+                        }
+
+                    ]
+
+                }
+
+            },
+
+
+            {
+
+                "mark": {
+
+                    "type":
+                        "text",
+
+                    "align":
+                        "left",
+
+                    "baseline":
+                        "middle",
+
+                    "dx":
+                        6,
+
+                    "fontWeight":
+                        "bold",
+
+                    "color":
+                        "#54362D"
+
+                },
+
+
+                "encoding": {
+
+
+                    "y": {
+
+                        "field":
+                            "city",
+
+                        "type":
+                            "nominal",
+
+                        "sort":
+                            "-x"
+
+                    },
+
+
+                    "x": {
+
+                        "field":
+                            "count",
+
+                        "type":
+                            "quantitative"
+
+                    },
+
+
+                    "text": {
+
+                        "field":
+                            "count",
+
+                        "type":
+                            "quantitative",
+
+                        "format":
+                            "d"
+
+                    }
+
+                }
+
+            }
+
+
+        ],
+
+
+        "config": {
+
+            "view": {
+                "stroke":
+                    null
+            }
+
+        }
+
+    };
+
+
+    await vegaEmbed(
+
+        "#state_city_chart",
+
+        chartSpec,
+
+        {
+            actions: false
+        }
+
+    );
+
+}
+
+
+
+async function initialiseExplorer() {
+
+    const response =
+        await fetch(
+            "Data/galleries_location_clean.csv"
+        );
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            "Gallery location CSV could not be loaded"
+        );
+
+    }
+
+
+    const csvText =
+        await response.text();
+
+
+    galleryRecords =
+        vega.read(
+            csvText,
+            {
+                type: "csv"
+            }
+        );
+
+
+    await updateStateExplorer(
+        "VIC"
+    );
+
+
+    const result =
+        await vegaEmbed(
+
+            "#gallery_location_map",
+
+            "js/gallery_location_map.vg.json",
+
+            {
+                actions: false
+            }
+
+        );
+
+
+    result.view.addEventListener(
+
+        "click",
+
+        function(event, item) {
+
+            if (
+                !item ||
+                !item.datum
+            ) {
+                return;
+            }
+
+
+            const selectedState =
+
+                item.datum.State ||
+
+                item.datum.state ||
+
+                item.datum.properties?.STE_NAME21;
+
+
+            if (!selectedState) {
+                return;
+            }
+
+
+            updateStateExplorer(
+                selectedState
+            );
+
+        }
+
+    );
+
+}
+
+
+initialiseExplorer()
+    .catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 2 — SECTOR
+========================================================= */
+
+vegaEmbed(
+    "#sector_scale_chart",
+    "js/sector_scale_chart.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#gallery_types_chart",
+    "js/gallery_types_chart.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 3 — COLLECTION THEMES
+========================================================= */
+
+vegaEmbed(
+    "#gallery_theme_heatmap",
+    "js/gallery_theme_heatmap.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 3 — QAGOMA TREEMAP
+========================================================= */
+
+vegaEmbed(
+    "#qagoma_treemap",
+    "js/qagoma_treemap.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 3 — DEPARTMENT × CATEGORY
+========================================================= */
+
+vegaEmbed(
+    "#department_category_heatmap",
+    "js/department_category_heatmap.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 4 — PERMANENT COLLECTIONS
+========================================================= */
+
+vegaEmbed(
+    "#collection_waffle",
+    "js/collection_waffle.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 4 — COLLECTION ACCESS
+========================================================= */
+
+vegaEmbed(
+    "#collection_access_chart",
+    "js/collection_access_dumbbell.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 5 — CROSS-GALLERY ARTISTIC PERIODS
+========================================================= */
+
+vegaEmbed(
+    "#gallery_artistic_periods_chart",
+    "js/gallery_artistic_periods.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 5.2 — QAGOMA ARTWORK FORMS
+========================================================= */
+
+let periodArtworkView;
+
+
+vegaEmbed(
+
+    "#qagoma_period_artwork_forms",
+
+    "js/qagoma_period_artwork_forms.vg.json",
+
+    {
+        actions: false
+    }
+
+)
+
+.then(result => {
+
+
+    periodArtworkView =
+        result.view;
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".period-filter-btn"
+        );
+
+
+    buttons.forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                const selectedCategory =
+                    this.dataset.category;
+
+
+                buttons.forEach(btn => {
+
+                    btn.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                periodArtworkView
+
+                    .signal(
+                        "categorySelect",
+                        selectedCategory
+                    )
+
+                    .runAsync();
+
+            }
+        );
+
+    });
+
+})
+
+.catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 6 — COLLECTION BUILDING
+========================================================= */
+
+vegaEmbed(
+    "#qagoma_acquisition_timeline",
+    "js/qagoma_acquisition_timeline.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#qagoma_acquisition_lag",
+    "js/qagoma_acquisition_lag.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+
+/* =========================================================
+   SECTION 7 — ARTIST GEOGRAPHY
+========================================================= */
+
+vegaEmbed(
+    "#qagoma_artist_world_map",
+    "js/qagoma_artist_world_map.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#qagoma_artist_asia_map",
+    "js/qagoma_artist_asia_map.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#qagoma_artist_europe_map",
+    "js/qagoma_artist_europe_map.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#qagoma_artist_americas_map",
+    "js/qagoma_artist_americas_map.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+vegaEmbed(
+    "#qagoma_artist_australia_map",
+    "js/qagoma_artist_australia_map.vg.json",
+    {
+        actions: false
+    }
+).catch(console.error);
+
+
+</script>
+
+
+</body>
+
+</html>
