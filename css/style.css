@@ -2562,3 +2562,18 @@ footer p {
     }
 
 }
+
+.footer-author {
+    margin-top: 14px;
+
+    color: #e5bd69;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.35);
+}
